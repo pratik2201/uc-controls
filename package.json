@@ -33,10 +33,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/pratik2201/ucbuilder.git"
+    "url": "https://github.com/pratik2201/uc-controls.git"
   },
   "bugs": {
-    "url": "https://github.com/pratik2201/ucbuilder/issues"
+    "url": "https://github.com/pratik2201/uc-controls/issues"
   },
-  "homepage": "https://github.com/pratik2201/ucbuilder#readme"
+  "homepage": "https://github.com/pratik2201/uc-controls#readme"
 }
