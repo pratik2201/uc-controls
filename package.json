@@ -1,0 +1,42 @@
+{
+  "name": "uc-controls",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    "./*": "./out/*",
+    "./package.json": "./package.json"
+  },
+  "description": "collection of controls can be used in apps made by",
+  "scripts": {
+    "clean": "rimraf dist",
+    "start": "electron .", 
+    "build:designer": "uc-dev build",
+    "build:dts": "tsc --emitDeclarationOnly",
+    "build": "tsc",
+    "rebuild": "npm run clean && npm run build && npm run build:dts",
+    "rebuild:start": "npm run rebuild && npm run start"
+  },
+  "author": "ap",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "esbuild": "^0.27.2",
+    "rimraf": "^6.0.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.3"  
+  },
+  "dependencies": {
+    "uc-runtime": "file:../uc-runtime"
+  },
+  "keywords": [
+    "usercontrols","ucs","templates"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pratik2201/ucbuilder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pratik2201/ucbuilder/issues"
+  },
+  "homepage": "https://github.com/pratik2201/ucbuilder#readme"
+}
