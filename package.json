@@ -13,7 +13,7 @@
     "build:designer": "uc-dev build",
     "build:dts": "tsc --emitDeclarationOnly",
     "build": "tsc",
-    "rebuild": "npm run clean && npm run build && npm run build:dts",
+    "rebuild": "npm run clean && npm run build:designer && npm run build && npm run build:dts",
     "rebuild:start": "npm run rebuild && npm run start"
   },
   "author": "ap",

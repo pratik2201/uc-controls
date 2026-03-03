@@ -3,6 +3,9 @@ import { UcDefaultConfig } from "uc-runtime/core-main.js";
 export default UcDefaultConfig({
     useTypeScript: true,
     guid: "ed24c044-c04d-4a5b-9a24-0f77b14ddfda",
+    cli: {
+        ResourceStorageFile:'src/designerFiles/Resources.ts',  
+    },
     browser: {
         resolveProjects: ["uc-runtime", "uc-dev",],
         importmap: {
