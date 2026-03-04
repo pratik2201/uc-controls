@@ -1,15 +1,15 @@
 {
   "name": "uc-controls",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.0",
   "type": "module",
   "exports": {
     "./*": "./out/*",
     "./package.json": "./package.json"
   },
-  "description": "collection of controls can be used in apps made by",
+  "description": "Reusable UI controls for UC-based Electron applications",
   "scripts": {
     "clean": "rimraf dist",
-    "start": "electron .", 
+    "start": "electron .",
     "build:designer": "uc-dev build",
     "build:dts": "tsc --emitDeclarationOnly",
     "build": "tsc",
@@ -23,13 +23,15 @@
     "esbuild": "^0.27.2",
     "rimraf": "^6.0.1",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.9.3"  
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "uc-runtime": "file:../uc-runtime"
+    "uc-runtime": "^3.0.0-beta.1"
   },
   "keywords": [
-    "usercontrols","ucs","templates"
+    "usercontrols",
+    "ucs",
+    "templates"
   ],
   "repository": {
     "type": "git",
