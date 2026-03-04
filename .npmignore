@@ -1,0 +1,11 @@
+# Ignore unnecessary files
+src/
+.vscode/
+node_modules/
+*.log
+*.tgz
+
+# Include out directory
+!out/**
+
+ 
