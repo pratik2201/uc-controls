@@ -1,36 +1,27 @@
 import { UcDefaultConfig } from "uc-runtime/core-main.js";
- 
+
 export default UcDefaultConfig({
-    guid: "e88aa70c-55a2-452f-ba44-e28f2bca81ba", 
-    cli:{
-        useElectron: false, 
-        useTypeScript: true, 
-        codeFileExt: ".ts", 
-        outputFileExt: ".js", 
-        designerDir: "designerFiles",
-        srcDir: "src", 
-        outDir: "out", 
+    useTypeScript: true,
+    guid: "ed24c044-c04d-4a5b-9a24-0f77b14ddfda",
+    cli: {
+        ResourceStorageFile: 'designerFiles/Resources.ts', 
         
-        ResourceStorageFile: "designerFiles/Resources.ts", 
-        baseCssPath: "styles.scss",
-        mainProcessFilePath:"",
-        preloadScriptFilePath:"",
-        devtools:true,
-        removeMenu:true,
     },
     browser: {
-        resolveProjects: [  "uc-runtime",  "uc-dev",  ],
+        resolveProjects: ["uc-runtime", "uc-dev",],
         importmap: {
-            
-        },       
+
+        },
+        baseCssPath: "styles.scss"
     },
-    projectBaseCssPath: "",   
+    projectBaseCssPath: "",
     preference: {
-        build: { 
-            ignorePath: [  "node_modules",  ".git",  ".vscode",  "out",  ],
+        build: {
+            ResourceStorageFile: "designerFiles/Resources.ts",
+            ignorePath: ["node_modules", ".git", ".vscode", "out",],
             RuntimeResources: [
                 {
-                    includeExtensions: [  ".jpg",  ".png",  ".html",  ".scss",  ".ico",  ".svg",  ],
+                    includeExtensions: [".jpg", ".png", ".html", ".scss", ".ico", ".svg",],
                     fromDeclare: "src",
                     toDeclares: ["out"]
                 }
@@ -40,7 +31,7 @@ export default UcDefaultConfig({
                 sequencePadSize: 8,
             }
         },
-        
+
         dirDeclaration: {
             src: {
                 /* 
@@ -65,9 +56,10 @@ export default UcDefaultConfig({
                  *   
                  *  Same for out declaration 
                  */
-                fileDeclaration:  { code :  {  extension : '.ts',  } ,
-    designer :  {  extension : '.designer.ts',  } ,
-     } 
+                fileDeclaration: {
+                    code: { extension: '.ts', },
+                    designer: { extension: '.designer.ts', },
+                }
             },
             out: {
                 /* 
@@ -76,19 +68,21 @@ export default UcDefaultConfig({
                 ./[]/lib/file.uc.html     =>    ./lib/file.uc.html
                 */
                 dirPath: 'out',
-                fileDeclaration:   { code :  {  extension : '.js',  } ,
-    designer :  {  extension : '.designer.js',  } ,
-     } 
+                fileDeclaration: {
+                    code: { extension: '.js', },
+                    designer: { extension: '.designer.js', },
+                }
             }
-        }, 
-         /**
-         * A common Declaration  for all declarations specified in `dirDeclaration` 
-         * (i.e src,out)
-         */
-        fileCommonDeclaration:  { designer :  {  subDirPath : 'designerFiles',  } ,
-    scss :  {  extension : '.scss',  } ,
-    html :  {  extension : '.html',  } ,
-     } ,        
+        },
+        /**
+        * A common Declaration  for all declarations specified in `dirDeclaration` 
+        * (i.e src,out)
+        */
+        fileCommonDeclaration: {
+            designer: { subDirPath: 'designerFiles', },
+            scss: { extension: '.scss', },
+            html: { extension: '.html', },
+        },
         /**
          * specify dirDeclaration key for source
          */

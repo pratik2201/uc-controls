@@ -25,9 +25,9 @@ export class WinFrame$Designer extends Usercontrol {
 
     initializecomponent?(args: IUcOptions, form: WinFrame){
         const ucExt = this.ucExtends;
-        args.guid = "uc-controls:ed24c044-c04d-4a5b-9a24-0f77b14ddfda:00000004";
-        args.htmlContent = ResourceManage.getContent("uc-controls:ed24c044-c04d-4a5b-9a24-0f77b14ddfda:00000003");
-        args.cssContent = ResourceManage.getContent("uc-controls:ed24c044-c04d-4a5b-9a24-0f77b14ddfda:00000004");
+        args.guid = "uc-controls:e88aa70c-55a2-452f-ba44-e28f2bca81ba:00000004";
+        args.htmlContent = ResourceManage.getContent("uc-controls:e88aa70c-55a2-452f-ba44-e28f2bca81ba:00000003");
+        args.cssContent = ResourceManage.getContent("uc-controls:e88aa70c-55a2-452f-ba44-e28f2bca81ba:00000004");
 
         ucExt.initializecomponent(args);                
         const CONTROLS = ucExt.controls; 
@@ -55,9 +55,9 @@ export class WinFrame$Designer extends Usercontrol {
 
      async initializecomponentAsync?(args: IUcOptions, form: WinFrame){
         const ucExt = this.ucExtends;
-        args.guid = "uc-controls:ed24c044-c04d-4a5b-9a24-0f77b14ddfda:00000004";
-        args.htmlContent = ResourceManage.getContent("uc-controls:ed24c044-c04d-4a5b-9a24-0f77b14ddfda:00000003");
-        args.cssContent = ResourceManage.getContent("uc-controls:ed24c044-c04d-4a5b-9a24-0f77b14ddfda:00000004");
+        args.guid = "uc-controls:e88aa70c-55a2-452f-ba44-e28f2bca81ba:00000004";
+        args.htmlContent = ResourceManage.getContent("uc-controls:e88aa70c-55a2-452f-ba44-e28f2bca81ba:00000003");
+        args.cssContent = ResourceManage.getContent("uc-controls:e88aa70c-55a2-452f-ba44-e28f2bca81ba:00000004");
 
         ucExt.initializecomponent(args);                
         const CONTROLS = ucExt.controls; 
