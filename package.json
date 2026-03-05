@@ -1,6 +1,6 @@
 {
   "name": "uc-controls",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0",
   "type": "module",
   "exports": {
     "./*": "./out/*",
@@ -26,7 +26,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "uc-runtime": "^3.0.0-beta.2"
+    "uc-runtime": "^3.0.1"
   },
   "keywords": [
     "usercontrols",

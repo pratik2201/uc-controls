@@ -18,6 +18,23 @@ npm install uc-controls
 
 ------------------------------------------------------------
 
+## 📦 List Of Controls Currently
+### WinFrame
+``` 
+x-from  : uc-controls/WinFrame.uc.html
+detail  :  use as draggable window frame 
+```
+```html 
+syntex  : 
+<WinFrame x-name="WinFrame1" x-from="uc-controls/WinFrame.uc.html"><!-- here is ui components that will be wrapped in window --></WinFrame>
+```
+
+ 
+this is the initial project
+only one usercontrol is made which is work as frame for Usercontrol. 
+
+your contribution to this project is appriciated.
+
 ## 🧩 What is uc-controls?
 
 uc-controls is:
