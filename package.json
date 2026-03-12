@@ -26,7 +26,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "uc-runtime": "file:../uc-runtime"
+    "uc-runtime": "^3.0.3"
   },
   "keywords": [
     "usercontrols",
