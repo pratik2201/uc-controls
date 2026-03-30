@@ -23,10 +23,11 @@
     "esbuild": "^0.27.2",
     "rimraf": "^6.0.1",
     "tsconfig-paths": "^4.2.0",
+    
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "uc-runtime": "^3.0.4"
+     "uc-runtime": "file:../uc-runtime"
   },
   "keywords": [
     "usercontrols",
