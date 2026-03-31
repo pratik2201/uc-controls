@@ -140,7 +140,14 @@ export class SimpleViewManage {
         let h = 0;
         const _this = this;
         let vh = this.viewSize.height;
-        vh = _this.paging ? _this.main.viewport.getClientRects()[0].height : Number.MAX_SAFE_INTEGER;//vh == 0 ? _this.main.scroller1.getClientRects()[0].height : vh;
+        if (_this.paging) {
+            const crect = _this.main.viewport.getClientRects();
+            if (crect.length > 0)
+                vh = crect[0].height;
+            //else vh = Number.MAX_SAFE_INTEGER;
+        } else {
+            vh = Number.MAX_SAFE_INTEGER;//vh == 0 ? _this.main.scroller1.getClientRects()[0].height : vh;
+        }
         this.viewSize.height = vh;
         function btot(sf: number) {
             if (sf <= 0) return;

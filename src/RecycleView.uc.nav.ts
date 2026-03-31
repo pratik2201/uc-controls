@@ -1,8 +1,6 @@
-import { CommonEvent } from "uc-runtime/global/commonEvent.js";
-import { KeyboardKey } from 'uc-runtime/core.js';
-import { TabIndexManager } from "uc-runtime/lib/TabIndexManager.js";
+import { CommonEvent, KeyboardKey, TabIndexManager } from 'uc-runtime/core.js';
 import { bondModel, RecycleView } from "./RecycleView.uc.js";
-import { SimpleViewManage } from "./RecycleView.uc.manage.js"; 
+import { SimpleViewManage } from "./RecycleView.uc.manage.js";
 export class SimpleViewNavigate {
     main: RecycleView;
     get source() { return this.main.source; }
@@ -135,12 +133,12 @@ export class SimpleViewNavigate {
         const bottomEle = this.lastBond.element;
         //return this.main.scroller1.offsetHeight - this.main.ll_view.offsetHeight;
         let h = this.mng.paging ? this.main.viewport.getClientRects()[0].height : Number.MAX_SAFE_INTEGER;
-//console.log(['VsDiff',h]);
+        //console.log(['VsDiff',h]);
         //let oldval = this.mng.viewSize.height - (bottomEle.offsetTop + bottomEle.offsetHeight);
         let newVal = h - (this.main.rowContainer.getClientRects()[0].height);
         //return h - (bottomEle.offsetTop + bottomEle.offsetHeight);
         //console.log(['rval',oldval,newVal]);
-        
+
         return newVal;
     }
     moveNext = (e: KeyboardEvent, count: number = 1) => {
@@ -277,19 +275,19 @@ export class SimpleViewNavigate {
                     _this.pendingPageing = false;
                 });
                 e.preventDefault();
-                break; 
-        } 
+                break;
+        }
         cfg.main.ArrangingContents = false;
         let res = cIndex != cfg.currentIndex;
         if (focusElementInsideNewitem && res) {
             let ci = this.main.currentItem;
-            if ( ci != undefined && selectorTxt != '') {
+            if (ci != undefined && selectorTxt != '') {
                 let ele = ci.element.querySelector(selectorTxt) as HTMLElement;
                 if (ele != null) ele.focus();
                 else TabIndexManager.moveNext(ci.element, e)
             }
         }
- 
+
         return res;
     }
 }

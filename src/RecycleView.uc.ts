@@ -1,5 +1,4 @@
-import { TabIndexManager } from 'uc-runtime/lib/TabIndexManager.js';
-import { TemplateNode } from 'uc-runtime/Template.js';
+import { TabIndexManager, TemplateNode } from 'uc-runtime/core.js';
 import { RecycleView$Designer } from './designerFiles/RecycleView.uc.designer.js';
 import { SimpleViewManage } from './RecycleView.uc.manage.js';
 import { SimpleViewNavigate } from './RecycleView.uc.nav.js';
@@ -18,11 +17,11 @@ export class RecycleView extends RecycleView$Designer {
     public set templateNode(value: TemplateNode) {
         this._templateNode = value;
         this.MapTemplate = (row, index) => this.templateNode;
-         
+
     }
 
     MapTemplate: (row: any, index: number) => TemplateNode;
-     
+
     /*constructor() {  super(); this.initializecomponent(arguments, this); }*/
     private _currentItem: bondModel;
     public get currentItem(): bondModel {
