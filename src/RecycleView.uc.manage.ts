@@ -1,4 +1,5 @@
 import { bondModel, RecycleView, RecycleViewState } from "./RecycleView.uc.js";
+
 class Size {
     width = 0;
     height = 0;
@@ -197,27 +198,4 @@ export class SimpleViewManage {
         this.main.bottomIndicator.innerHTML = bottomCount == 0 ? "<span style='color: transparent;'>&#11167;</span>  " : "<span>" + bottomCount + " &#11167;</span>";
 
     }
-}
-
-
-
-
-// private resizerCall = ({ width = 0, height = 0 }: { width: number, height: number }, callRefresh = true): void => {
-//     //console.log(['current', this.viewSize.width,this.viewSize.height]);
-//     //console.log(['diff', this.viewSize.width-width,this.viewSize.height-height,width,height]);
-//     // console.log(['OLD_HEIGHT',height]);
-//     return;
-//     height = Math.floor(height / SimpleViewManage.FrectionSize) * SimpleViewManage.FrectionSize;
-//     //console.log(['NEW_HEIGHT',height]);
-
-//     let diffw = this.viewSize.width - width;
-//     let diffh = this.viewSize.height - height;
-
-//     console.log(['resizerCall_HEIGHT', height]);
-//     this.viewSize.setBy.value(width, height);
-
-//     if (!(diffw == 0 && diffh == 0))
-//         this.reFill();
-//     //console.log(this.viewSize);
-//     //config.setPos();
-// }
+} 

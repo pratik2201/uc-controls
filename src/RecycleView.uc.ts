@@ -2,7 +2,10 @@ import { TabIndexManager, TemplateNode } from 'uc-runtime/core.js';
 import { RecycleView$Designer } from './designerFiles/RecycleView.uc.designer.js';
 import { SimpleViewManage } from './RecycleView.uc.manage.js';
 import { SimpleViewNavigate } from './RecycleView.uc.nav.js';
-
+class IDynamicSource<K = any> {
+    length = 0;
+    get: (index: number) => Promise<K>;
+}
 export class RecycleViewState {
     currentIndex: number = -1;
     topIndex: number = 0;
@@ -19,10 +22,8 @@ export class RecycleView extends RecycleView$Designer {
         this.MapTemplate = (row, index) => this.templateNode;
 
     }
-
     MapTemplate: (row: any, index: number) => TemplateNode;
 
-    /*constructor() {  super(); this.initializecomponent(arguments, this); }*/
     private _currentItem: bondModel;
     public get currentItem(): bondModel {
         let rtrn = this._currentItem;
@@ -38,16 +39,23 @@ export class RecycleView extends RecycleView$Designer {
     manage: SimpleViewManage;
     navigate: SimpleViewNavigate;
 
-    private _source: any[] = [];
+    private isDynamicSource = false;
+    private _staticSource: any[] = [];
     length: number = 0;
 
+    private _dynamicSource: IDynamicSource;
     public get source(): any[] {
-        return this._source;
+        return this._staticSource;
     }
     MinimumLength = 1;
     public set source(value: any[]) {
-        this._source = value;
-        this.length = value.length;
+        this.isDynamicSource = Object.getPrototypeOf(value).constructor.name != 'Array';
+        if (!this.isDynamicSource) {
+            this._staticSource = value;
+            this.length = value.length;
+        } else {
+            this._dynamicSource = value as unknown as IDynamicSource;
+        }
         this.manage.initRows();
     }
     provideElement = <K>(row: K, index: number) => {
