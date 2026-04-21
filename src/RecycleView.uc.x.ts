@@ -606,17 +606,17 @@ export class SimpleViewNavigate {
         let _this = this;
         cfg.main.ArrangingContents = true;
         switch (e.code as KeyboardKey) {
-            case "ArrowUp": // up key
+            case "arrowup": // up key
                 this.movePrev(e);
                 this.mng.updateHiddenCount();
                 e.preventDefault();
                 break;
-            case "ArrowDown": // down key
+            case "arrowdown": // down key
                 this.moveNext(e);
                 this.mng.updateHiddenCount();
                 e.preventDefault();
                 break;
-            case "PageUp": // page up key
+            case "pageup": // page up key
                 if (_this.pendingPageing == true) return;
                 _this.pendingPageing = true;
                 requestAnimationFrame(() => {
@@ -626,7 +626,7 @@ export class SimpleViewNavigate {
                 });
                 e.preventDefault();
                 break;
-            case "PageDown": // page down key
+            case "pagedown": // page down key
                 if (_this.pendingPageing == true) return;
                 _this.pendingPageing = true;
                 requestAnimationFrame(() => {

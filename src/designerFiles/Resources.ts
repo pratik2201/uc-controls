@@ -42,7 +42,7 @@ await import("uc-runtime/designerFiles/Resources.js");
 
 AssemblyManager.Register({
      name: "uc-controls",
-     guid: "e88aa70c-55a2-452f-ba44-e28f2bca81ba",
-     cssGuid: "uc-controls:e88aa70c-55a2-452f-ba44-e28f2bca81ba:00000001",
-     ucConfigGuid: "uc-controls:e88aa70c-55a2-452f-ba44-e28f2bca81ba:00000002"
+     ProjectGUID: "e88aa70c-55a2-452f-ba44-e28f2bca81ba",
+     ProjectCSS: "uc-controls:e88aa70c-55a2-452f-ba44-e28f2bca81ba:00000001",
+     ProjectUcConfig: "uc-controls:e88aa70c-55a2-452f-ba44-e28f2bca81ba:00000002"
 });
