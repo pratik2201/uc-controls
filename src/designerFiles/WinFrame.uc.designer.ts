@@ -29,7 +29,7 @@ export class WinFrame$Designer extends Usercontrol {
         args.htmlContent = ResourceManage.getContent("uc-controls:e88aa70c-55a2-452f-ba44-e28f2bca81ba:00000005");
         args.cssContent = ResourceManage.getContent("uc-controls:e88aa70c-55a2-452f-ba44-e28f2bca81ba:00000006");
 
-        ucExt.initializecomponent(args);                
+         ucExt.initializecomponent(args);                
         const CONTROLS = ucExt.controls; 
 
         
@@ -59,7 +59,7 @@ export class WinFrame$Designer extends Usercontrol {
         args.htmlContent = ResourceManage.getContent("uc-controls:e88aa70c-55a2-452f-ba44-e28f2bca81ba:00000005");
         args.cssContent = ResourceManage.getContent("uc-controls:e88aa70c-55a2-452f-ba44-e28f2bca81ba:00000006");
 
-        ucExt.initializecomponent(args);                
+         await  ucExt.initializecomponent(args);                
         const CONTROLS = ucExt.controls; 
 
         

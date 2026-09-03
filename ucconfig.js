@@ -12,6 +12,7 @@ export default UcDefaultConfig({
         outDir: "out", 
         
         ResourceStorageFile: "designerFiles/Resources.ts", 
+        ResourceStorageDir:'out/designerFiles/files',
         baseCssPath: "styles.scss",
         mainProcessFilePath:"",
         preloadScriptFilePath:"",

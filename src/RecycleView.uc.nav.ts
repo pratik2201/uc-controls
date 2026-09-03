@@ -1,4 +1,4 @@
-import { CommonEvent, KeyboardKey, TabIndexManager } from 'uc-runtime/core.js';
+import { CommonEvent,   TabIndexManager } from 'uc-runtime/core.js';
 import { bondModel, RecycleView } from "./RecycleView.uc.js";
 import { SimpleViewManage } from "./RecycleView.uc.manage.js";
 export class SimpleViewNavigate {
@@ -245,7 +245,7 @@ export class SimpleViewNavigate {
         let cIndex = cfg.currentIndex;
         let _this = this;
         cfg.main.ArrangingContents = true;
-        switch (e.code as KeyboardKey) {
+        switch (e.code  ) {
             case "arrowup": // up key
                 this.movePrev(e);
                 this.mng.updateHiddenCount();

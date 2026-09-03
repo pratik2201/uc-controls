@@ -1,4 +1,4 @@
-import { CommonEvent, KeyboardKey, TabIndexManager, TemplateNode } from 'uc-runtime/core.js';
+import { CommonEvent,   TabIndexManager, TemplateNode } from 'uc-runtime/core.js';
 import { RecycleView$Designer } from './designerFiles/RecycleView.uc.designer.js';
  
 
@@ -279,7 +279,7 @@ export class SimpleViewManage {
         // let e = bondModel.Parse(main.source[i]);
         if (!e.isGenerated) {
             //_this.Events.justBeforeGenerateElement(e);
-            e.element = main.provideElement(e.row, e.index);
+            //e.element = main.provideElement(e.row, e.index);
             e.hasMeasured = false;
         }
         if (!e.isConnected) {
@@ -605,7 +605,7 @@ export class SimpleViewNavigate {
         let cIndex = cfg.currentIndex;
         let _this = this;
         cfg.main.ArrangingContents = true;
-        switch (e.code as KeyboardKey) {
+        switch (e.code  ) {
             case "arrowup": // up key
                 this.movePrev(e);
                 this.mng.updateHiddenCount();

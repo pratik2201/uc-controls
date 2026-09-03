@@ -118,7 +118,7 @@ export class SimpleViewManage {
         // let e = bondModel.Parse(main.source[i]);
         if (!e.isGenerated) {
             //_this.Events.justBeforeGenerateElement(e);
-            e.element = main.provideElement(e.row, e.index);
+            //e.element = main.provideElement(e.row, e.index);
             e.hasMeasured = false;
         }
         if (!e.isConnected) {
